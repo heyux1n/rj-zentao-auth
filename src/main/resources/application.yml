@@ -1,0 +1,14 @@
+server:
+  port: 2121
+
+
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://192.168.10.23:3306/zentao?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
