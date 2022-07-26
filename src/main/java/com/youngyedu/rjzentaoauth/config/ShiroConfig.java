@@ -17,7 +17,7 @@ import java.util.Map;
  * @Create: 2022-06-21
  * @Description:
  */
-@Configuration
+//@Configuration
 public class ShiroConfig {
     @Bean
     public UserRealm userRealm() {
@@ -45,7 +45,16 @@ public class ShiroConfig {
         Map<String, String> map = new LinkedHashMap<>();
         // 有先后顺序
         // 允许匿名访问
+        map.put("js", "anon");
+        map.put("css", "anon");
+        map.put("image", "anon");
+        map.put("lib", "anon");
+
+
         map.put("/login", "anon");
+        map.put("/zentao", "anon");
+        map.put("/zentao/*", "anon");
+        map.put("/sso/*", "anon");
         map.put("/user/*", "anon");
         // 进行身份认证后才能访问
         map.put("/**", "authc");

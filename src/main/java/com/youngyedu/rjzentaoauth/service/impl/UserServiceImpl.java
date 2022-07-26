@@ -1,7 +1,6 @@
 package com.youngyedu.rjzentaoauth.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.mysql.cj.util.StringUtils;
 import com.youngyedu.rjzentaoauth.entity.Dept;
 import com.youngyedu.rjzentaoauth.entity.User;
 import com.youngyedu.rjzentaoauth.mapper.UserMapper;

@@ -4,11 +4,19 @@ server:
 
 spring:
   datasource:
-    username: root
-    password:
+    username: zentao
+    password: 123456
     url: jdbc:mysql://192.168.10.23:3306/zentao?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
+
+proxy:
+  servlet_url: /proxy-showdoc/*
+  target_url: http://192.168.12.24
+  servlet_url2: /*
+#  target_url2: http://192.168.10.23:3131
+  target_url2: http://192.168.12.13:8888
